@@ -25,3 +25,6 @@ For local testing, run `npm run build` then serve `dist` with any static web ser
 
 ## Layout update
 The homepage is now completely white with NOAH GIBBS above the live London clock and date. There are no header or footer navigation bars: gallery links (for folders containing photos) and Contact appear only under the clock. Copyright is centred at the bottom. All typography is monospaced and black. Gallery navigation links remain hidden until you put images in their folders.
+
+## Empty folder fix
+The build handles a missing `public/photos` directory without failing. Note that uploading files through GitHub's web interface may omit hidden `.gitkeep` files. If you want to keep empty Cars/Nature folders visible in the repository, add `.gitkeep` to each folder with GitHub Desktop.

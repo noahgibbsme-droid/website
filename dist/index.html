@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff"><title>NOAH GIBBS — Photography</title>
+<meta name="description" content="Photography portfolio by Noah Gibbs">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main>
+  <section class="landing" id="home" aria-label="Homepage">
+    <div class="landing-inner">
+      <h1 class="brand">NOAH GIBBS</h1>
+      <div id="clock" class="clock" aria-label="Current London time">--:--:--</div>
+      <div id="date" class="date" aria-label="Date in London"></div>
+      <nav class="navigation" id="nav" aria-label="Main navigation"><a href="#contact">contact</a></nav>
+    </div>
+  </section>
+  <div id="galleries" class="galleries"></div>
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <p>For enquiries, collaborations and photography bookings.</p>
+    <a href="mailto:noahgibbsme@gmail.com">noahgibbsme@gmail.com</a>
+  </section>
+</main>
+<footer><p>© <span id="year">2026</span> NOAH GIBBS · PHOTOGRAPHY</p></footer>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button id="close" class="close" aria-label="Close">×</button>
+  <button id="prev" class="previous" aria-label="Previous image">‹</button>
+  <img id="full" alt="">
+  <button id="next" class="next" aria-label="Next image">›</button>
+  <div id="count" class="count"></div>
+</div>
+<script src="/script.js" defer></script>
+</body>
+</html>
