@@ -1,32 +1,33 @@
-# NOAH GIBBS — Ready-to-upload photo portfolio
+# NOAH GIBBS — Mosaic portfolio
 
-All website files are at the top level of this ZIP.
+This ZIP contains the **entire replacement website**, with files directly at the ZIP root.
 
-## Your photo folders
-- `public/photos/Cars`
-- `public/photos/Nature`
-- `public/photos/Structures`
-- `public/photos/People`
+## How it looks
+- Homepage: small NOAH GIBBS wordmark, London time/date, six-column photographic mosaic, and **view all →** link.
+- View all: left-hand gallery filters (Cars, Nature, People, Structures, All) and a spacious five-column photo grid.
+- Photo: click any thumbnail to open a separate detail page containing its title, description, and previous/next links.
+- Links are automatically generated from the existing subfolders in `public/photos`.
 
-Each contains a test image and matching description text file (`demo-*.jpg` and `demo-*.txt`). Delete the demo files when you're ready.
+## Add or edit photographs
+1. Go to `public/photos/Cars/` (or Nature, People, Structures).
+2. Drag `.jpg`, `.jpeg`, `.png`, `.webp`, `.gif` or `.avif` images into that folder.
+3. For `my-photo.jpg`, add `my-photo.txt` in the *same folder*:
 
-## Add photos and descriptions
-Drag a photo (for example `porsche.jpg`) into `public/photos/Cars/`. To give it a description, create `porsche.txt` in the same folder:
+```text
+My Photograph Title
+First line of the description.
+Further description is optional.
+```
 
-Porsche 911 GT3
-Photographed in London during golden hour.
-Close-up study of the bodywork.
+The first line of each text file is the title; the rest is the description. Without a text file, the filename becomes the title. The folder itself becomes a gallery and filter. Delete `demo-*` images and text files to remove the included examples.
 
-The first line becomes the title. The rest is the description. Photos without text files work too. Create additional folders under `public/photos/` to add galleries. Remove folders to remove links.
+## Deploy
+Extract the ZIP. Replace the **contents of the root** of the GitHub repository `noahgibbsme-droid/website` with these files. Do not add an extra containing folder. GitHub Desktop makes replacing everything easier: clone repository, replace files while keeping `.git`, commit and push. Vercel deploys the new commit.
 
-## Deploy to GitHub
-Unzip. Copy the CONTENTS into the ROOT of `noahgibbsme-droid/website`, not a nested folder. Replace old files. GitHub Desktop makes it easiest: clone repository, copy new files in (keep `.git`), commit and push. On GitHub web you can drag files into Upload files, but existing old files aren't automatically deleted.
-
-## Vercel settings
+## Vercel
 Framework: Other
-Build command: npm run build
-Output directory: dist
-Install command: npm install
-Root directory: ./
+Build Command: `npm run build`
+Output Directory: `dist`
+Install Command: `npm install`
 
-Homepage has a live London clock and links to all gallery folders plus Contact. Gallery pages have image grids, and clicking an image opens a full-size detail page with its title and description.
+The provided images are examples only, not photographs taken by you.
