@@ -31,3 +31,9 @@ Output Directory: `dist`
 Install Command: `npm install`
 
 The provided images are examples only, not photographs taken by you.
+
+## Auto-cropped gallery thumbnails
+The View All and filtered gallery pages now automatically crop thumbnails into consistent portrait rectangles (using CSS `object-fit: cover`). The original image files are not edited, and the individual photo pages show the entire original image.
+
+## New layout changes
+Homepage navigation, view-all link, gallery filters, titles, photo captions, contact text, and footer are centred. Added subtle page-entry and hover transitions with reduced-motion accessibility support. Photo folder and .txt description workflows are unchanged.
