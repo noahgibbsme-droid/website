@@ -28,3 +28,5 @@ The homepage is now completely white with NOAH GIBBS above the live London clock
 
 ## Empty folder fix
 The build handles a missing `public/photos` directory without failing. Note that uploading files through GitHub's web interface may omit hidden `.gitkeep` files. If you want to keep empty Cars/Nature folders visible in the repository, add `.gitkeep` to each folder with GitHub Desktop.
+
+Navigation shows only the folders in `public/photos/` (including empty folders), plus Contact. Add or remove folders and commit to update navigation. Copyright stays pinned at bottom of viewport.
