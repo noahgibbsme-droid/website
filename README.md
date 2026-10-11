@@ -1,34 +1,32 @@
-# NOAH GIBBS — Photography portfolio
+# NOAH GIBBS — Ready-to-upload photo portfolio
 
-## Add galleries
-Create a folder in `public/photos/`, e.g. `public/photos/Portraits/`. Every folder becomes a navigation link, even if it has no photos. The starter folders are `Cars`, `Nature`, and `Structures` (each has a `.gitkeep` so GitHub preserves it).
+All website files are at the top level of this ZIP.
+
+## Your photo folders
+- `public/photos/Cars`
+- `public/photos/Nature`
+- `public/photos/Structures`
+- `public/photos/People`
+
+Each contains a test image and matching description text file (`demo-*.jpg` and `demo-*.txt`). Delete the demo files when you're ready.
 
 ## Add photos and descriptions
-Drag JPG, JPEG, PNG, WEBP, GIF or AVIF images into a gallery folder. For a photo called `my-car.jpg`, create `my-car.txt` in **the same folder**:
+Drag a photo (for example `porsche.jpg`) into `public/photos/Cars/`. To give it a description, create `porsche.txt` in the same folder:
 
-```text
-Porsche 911 at Sunset
-A quiet evening shoot in London.
-Photographed in natural light with warm reflections.
-```
+Porsche 911 GT3
+Photographed in London during golden hour.
+Close-up study of the bodywork.
 
-The **first line** becomes the image title, and the **remaining lines** become the description. No `.txt` is required: the image filename becomes its title automatically.
+The first line becomes the title. The rest is the description. Photos without text files work too. Create additional folders under `public/photos/` to add galleries. Remove folders to remove links.
 
-## How it works
-- Homepage links open **separate gallery pages**.
-- Gallery pages show a square photo grid; click any photo for a full image, description, and previous/next navigation.
-- The homepage has the live London clock and a Contact link.
-- Remove a gallery folder to remove its navigation link.
-- To update Vercel, commit/push the changed photos or descriptions to GitHub.
+## Deploy to GitHub
+Unzip. Copy the CONTENTS into the ROOT of `noahgibbsme-droid/website`, not a nested folder. Replace old files. GitHub Desktop makes it easiest: clone repository, copy new files in (keep `.git`), commit and push. On GitHub web you can drag files into Upload files, but existing old files aren't automatically deleted.
 
-## Vercel
+## Vercel settings
 Framework: Other
-Build command: `npm run build`
-Output directory: `dist`
-Install command: `npm install`
-Root directory: repository root
+Build command: npm run build
+Output directory: dist
+Install command: npm install
+Root directory: ./
 
-## Test locally
-Install Node.js, run `npm run build`, then serve `dist` using any static file server.
-
-The ZIP contents go **directly into the repository root** (not in a second nested folder).
+Homepage has a live London clock and links to all gallery folders plus Contact. Gallery pages have image grids, and clicking an image opens a full-size detail page with its title and description.
