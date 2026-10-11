@@ -1,1 +1,0 @@
-const clock=document.querySelector('[data-datetime]');if(clock){const fmt=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/London',day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit',hour12:true});function refresh(){clock.textContent=fmt.format(new Date()).replace(',', '')+' LDN'}refresh();setInterval(refresh,1000)}
