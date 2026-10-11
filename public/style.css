@@ -1,0 +1,23 @@
+:root{font-family:"Courier New",Courier,monospace;color:#111;background:#fff;color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:#111}a{color:inherit}
+.landing{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:45px 20px 90px}
+.landing-inner{width:100%;max-width:1000px;margin:auto}
+.brand{font-size:clamp(23px,3vw,38px);font-weight:400;letter-spacing:.025em;margin:0 0 48px}
+.clock{font-size:clamp(52px,9.5vw,125px);font-weight:400;letter-spacing:.075em;line-height:1.15;font-variant-numeric:tabular-nums;white-space:nowrap}
+.date{font-size:clamp(14px,2vw,24px);letter-spacing:.06em;margin-top:37px}
+.navigation{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:18px 45px;margin:clamp(95px,16vh,175px) auto 0}
+.navigation a{text-decoration:none;text-transform:lowercase;font-size:clamp(17px,2.15vw,26px);white-space:nowrap}
+.navigation a:hover,.contact a:hover{text-decoration:underline}
+.galleries,.contact{max-width:1600px;margin:0 auto;padding-left:4%;padding-right:4%}
+.gallery{padding:65px 0 75px;scroll-margin-top:18px}
+.gallery h2,.contact h2{font-size:24px;font-weight:400;margin:0 0 27px}
+.photos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.thumb{display:block;width:100%;aspect-ratio:1;object-fit:cover;cursor:pointer}
+.contact{padding-top:90px;padding-bottom:95px;text-align:center}
+.contact p,.contact a{font-size:15px;line-height:1.7}
+footer{background:#fff;color:#111;text-align:center;padding:30px 20px 45px;font-size:13px}footer p{margin:0}
+.lightbox[hidden]{display:none}.lightbox{position:fixed;inset:0;z-index:100;background:rgba(255,255,255,.98);display:flex;align-items:center;justify-content:center}
+.lightbox img{max-width:calc(100vw - 160px);max-height:calc(100vh - 110px);object-fit:contain}
+.lightbox button{border:0;background:transparent;color:#111;cursor:pointer;font:inherit}
+.close{position:absolute;top:18px;right:27px;font-size:38px}.previous,.next{position:absolute;top:50%;transform:translateY(-50%);font-size:50px}.previous{left:25px}.next{right:25px}.count{position:absolute;bottom:24px;font-size:12px}
+@media(max-width:750px){.brand{margin-bottom:40px}.landing{padding:42px 14px 75px}.clock{font-size:clamp(39px,9vw,75px);letter-spacing:.015em}.date{margin-top:26px}.navigation{gap:20px 24px;margin-top:110px}.navigation a{font-size:19px}.galleries,.contact{padding-left:5%;padding-right:5%}.photos{grid-template-columns:repeat(2,minmax(0,1fr))}.lightbox img{max-width:calc(100vw - 85px);max-height:calc(100vh - 100px)}.previous{left:8px}.next{right:8px}}

@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const root=process.cwd(), src=path.join(root,'public'), out=path.join(root,'dist');
+fs.rmSync(out,{recursive:true,force:true}); fs.cpSync(src,out,{recursive:true});
+const photoDir=path.join(src,'photos');
+const allowed=new Set(['.jpg','.jpeg','.png','.webp','.gif','.avif']);
+const folders=fs.readdirSync(photoDir,{withFileTypes:true}).filter(x=>x.isDirectory()&&!x.name.startsWith('.'));
+const galleries=folders.map(folder=>({name:folder.name,images:fs.readdirSync(path.join(photoDir,folder.name),{withFileTypes:true}).filter(f=>f.isFile()&&allowed.has(path.extname(f.name).toLowerCase())).sort((a,b)=>a.name.localeCompare(b.name,undefined,{numeric:true})).map(f=>'/photos/'+encodeURIComponent(folder.name)+'/'+encodeURIComponent(f.name))})).filter(g=>g.images.length);
+fs.writeFileSync(path.join(out,'galleries.json'),JSON.stringify(galleries,null,2));
+console.log(`Built ${galleries.length} visible galleries`);
